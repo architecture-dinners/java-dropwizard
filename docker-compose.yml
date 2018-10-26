@@ -1,0 +1,14 @@
+
+version: '2'
+
+services:
+  server:
+    build: ./
+    container_name: java-app
+    command: bash
+    environment:
+      PORT: 8085
+    ports:
+      - "8085:8085"
+    volumes:
+      - .:/usr/src/java-app
